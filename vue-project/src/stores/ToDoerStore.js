@@ -9,6 +9,7 @@ export const useToDoerStore = defineStore('useToDoerStore', {
         {id: 2, text: 'Cocinar', hover: false},
       ],
       completedTodos: [],
+      newTodo: "",
     }
   },
 
@@ -36,7 +37,7 @@ export const useToDoerStore = defineStore('useToDoerStore', {
         this.todos[this.todos.indexOf(todo)].hover = hover
       }
       else {
-        this.completedTodos[this.todos.indexOf(todo)].hover = hover
+        this.completedTodos[this.completedTodos.indexOf(todo)].hover = hover
       }
     }
   }
